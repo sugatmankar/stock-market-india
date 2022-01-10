@@ -11,7 +11,7 @@ const PORT = process.env.PORT || 3000;
 
 var server = http.createServer(function(req,res){
     res.setHeader('Content-Type', 'application/json');
-    res.end(JSON.stringify({ a: 1 }, null, 3));
+   // res.end(JSON.stringify({ a: 1 }, null, 3));
 });
 
 var app = express(server);
