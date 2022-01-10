@@ -7,15 +7,7 @@ var BSEAPI = API.BSE;
 var NSEAPI = API.NSE;
 const PORT = process.env.PORT || 3000;
 
-//var app = express();
-
-var server = http.createServer(function(req,res){
-    res.setHeader('Content-Type', 'application/json');
-   // res.end(JSON.stringify({ a: 1 }, null, 3));
-});
-
-var app = express(server);
-app.set('json spaces', 40);
+var app = express();
 
 server.listen(PORT, () => {
   console.log("Server running on port " + PORT);
