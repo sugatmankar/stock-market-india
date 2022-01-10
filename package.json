@@ -1,4 +1,7 @@
 {
+   "scripts": {
+    "start": "node App.js"
+  },
   "name": "stock-market-india",
   "version": "1.0.0",
   "description": "\"An API Library which fetches data from Bombay Stock Exchange and National Stock Exchange and returns data in JSON format.\"",
