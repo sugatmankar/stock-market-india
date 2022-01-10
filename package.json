@@ -1,6 +1,6 @@
 {
    "scripts": {
-    "start": "node App.js"
+    "start": "node app.js"
   },
   "name": "stock-market-india",
   "version": "1.0.0",
