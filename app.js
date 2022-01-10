@@ -15,6 +15,7 @@ var server = http.createServer(function(req,res){
 });
 
 var app = express(server);
+app.set('json spaces', 40);
 
 server.listen(PORT, () => {
   console.log("Server running on port " + PORT);
