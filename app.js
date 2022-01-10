@@ -7,16 +7,13 @@ var NSEAPI = API.NSE;
 
 var app = express();
 
-const port = process.env.PORT || 8080;
-app.listen(port, () => {
-  console.log('Express server listening on port', port)
-});
 
 // National Stock Exchange (NSE) APIS
 
 // Get the stock market status (open/closed) - JSON
 // Example: http://localhost:3000/get_market_status
 app.get("/get_market_status", (req, res, next) => {
+  console.log('get market status')
   NSEAPI.getMarketStatus()
     .then(function (response) {
       res.json(response.data);
