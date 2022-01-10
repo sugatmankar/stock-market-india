@@ -1,12 +1,18 @@
 // var API = require('indian-stock-exchange');
 var express = require("express");
 var API = require('./index');
+const http = require('http');
 
 var BSEAPI = API.BSE;
 var NSEAPI = API.NSE;
 const PORT = process.env.PORT || 3000;
 
-var app = express();
+//var app = express();
+
+var app = http.createServer(function(req,res){
+    res.setHeader('Content-Type', 'application/json');
+    res.end(JSON.stringify({ a: 1 }, null, 3));
+});
 
 app.listen(PORT, () => {
   console.log("Server running on port " + PORT);
