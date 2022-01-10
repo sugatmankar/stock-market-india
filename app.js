@@ -9,12 +9,14 @@ const PORT = process.env.PORT || 3000;
 
 //var app = express();
 
-var app = http.createServer(function(req,res){
+var server = http.createServer(function(req,res){
     res.setHeader('Content-Type', 'application/json');
     res.end(JSON.stringify({ a: 1 }, null, 3));
 });
 
-app.listen(PORT, () => {
+var app = express(server);
+
+server.listen(PORT, () => {
   console.log("Server running on port " + PORT);
 });
 // National Stock Exchange (NSE) APIS
